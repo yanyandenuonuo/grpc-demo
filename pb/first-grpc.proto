@@ -1,0 +1,20 @@
+syntax = "proto3";
+package first_grpc;
+
+// The first service definition.
+service FirstGRPC {
+    // Sends Call
+    rpc TestGRPC (RequestParam) returns (ReplyBody) {};
+}
+
+// The request param
+message RequestParam {
+    string name = 1;
+    string value = 2;
+}
+
+// The response message
+message ReplyBody {
+    int32 code = 1;
+    string message = 2;
+}
